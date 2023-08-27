@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto+Mono&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.home {
+    // background-color: #fdd7b2;
+    min-height: 100vh;
+    
+}
+
+.main {
+    background-color: #9a9999;
+    min-height: 75vh;
+    padding-top: 70px;
+}
+
+.image{
+    // padding-top: 50px;
+}
+
+.image img {
+    height: 50vh;
+    width: 100vw;
+    margin-top: 80px;
+}
+
+.intro .name {
+    font-size: 2.5rem;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    text-shadow: 5px 2px rgb(94, 93, 93);
+}
+
+.intro .about {
+    font-size: 1.2rem;
+    padding: 0 10px;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+
+.home-project-button {
+    min-height: 12vh;
+    background-color: rgb(5, 127, 70,0.6);
+    text-align: center;
+    padding-top: 40px;
+    
+}
+
+.home-project-button button{
+    padding: 10px;
+    font-size: 1.3rem;
+    border-radius: 6px;
+    border: 1px solid rgb(6, 66, 38);
+    background-color: rgb(224, 224, 224);
+    color: rgb(6, 66, 38);
+    transition: 0.7s ease;
+    cursor: pointer;
+    
+}
+
+.home-project-button button:hover{
+    background-color: rgb(6, 66, 38);
+    color: white;
+}
+
+.quote {
+    min-height: 15vh;
+    background-color: rgb(5, 127, 70,0.4);
+}

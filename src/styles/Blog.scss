@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.blog-main{
+    min-height: 100vh;
+    background-color: #e2edff;
+    padding-bottom: 150px;
+}
+
+.blog-page-title {
+    padding-top: 130px;
+}
+
+.blog-page-title p{
+    font-size: 3rem;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.blog-card {
+    border: 1px solid black;
+    width: 80vw;
+    margin: 12px 0;
+    
+    border-radius: 9px;
+    
+}
+
+.blogs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    
+}
+
+.blog-title {
+    border-bottom: 1px solid rgb(5, 4, 4);
+    background-color: rgb(247, 233, 135);
+    padding: 9px 9px;
+    border-bottom: 1px solid rgb(114, 114, 114);
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
+
+.blog-desc {
+    padding: 15px;
+    background-color: white;
+}
+
+.blog-button {
+    padding: 5px 15px;
+    background-color: white;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+
+.blog-button button{
+    padding: 6px 11px;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    background-color: #5B9A8B ;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.blog-link button:hover {
+    background-color: rgb(1, 52, 40);
+}
+
+.blog-title h2{
+    font-family: 'Ruwudu', serif;
+}
+
+.blog-desc p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+
+}

@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.project-admin {
+    min-height: 100vh;
+    background-color: #e2edff;
+    display: flex;
+}
+
+.project-list {
+    padding-top: 140px;
+    width: 80vw;
+    padding-bottom: 190px;
+    margin-left: 300px;
+}
+
+.projects table{
+    background-color: rgb(249, 249, 119);
+    padding: 15px;
+    width: 70vw;
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    margin-left: 60px;
+    
+}
+
+#project-edit-button button {
+    padding: 4px 20px;
+    border-radius: 6px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#project-delete-button button {
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.add-project-button {
+    margin-left: 60px;
+    margin-bottom: 30px;
+}
+
+.add-project-button button {
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.project-list-heading{
+    margin-left: 60px;
+    margin-bottom: 15px;
+}
+.project-list-heading p {
+    font-size: 2.5rem;
+}
+
+.project-list-table table {
+    margin-left: 60px;
+    width: 70vw;
+    background-color: rgb(249, 249, 119);
+    padding: 15px;
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.table-column-name p{
+    font-weight: bold;
+    
+}
+
+#project-title {
+    width: 20vw;
+    // background-color: red;
+}
+#project-skills {
+    width: 15vw;
+    // background-color: aqua;
+}
+
+
+#project-date {
+    width: 12vw;
+    // background-color: bisque;
+}
+
+
+#project-edit-button {
+    width: 8vw;
+    // padding-left: 30px;
+}
+
+#project-delete-button {
+    width: 8vw;
+    // padding-left: 30px;
+}

@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.footer {
+    background-color: black;
+    min-height: 14vh;
+    padding-top: 25px;
+}
+
+.title p {
+    color: white;
+    text-align: center;
+}
+
+.footer-link {
+    color: white;
+    margin: 5px;
+}
+
+.footer-link button{
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    min-height: 10vh;
+}
+
+.copyright p{
+    color: white;
+    text-align: center;
+    min-height: 3vh;
+}

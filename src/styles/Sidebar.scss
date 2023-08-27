@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar {
+    width: 20vw;
+    background-color: rgb(38, 0, 63);
+    padding-top: 50px;
+    position: fixed;
+    top: 20vh;
+    min-height: 18vh;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+
+.sidebar-menu li{
+    // margin: 45px 0;
+    list-style: none;
+    
+
+
+}
+.sidebar-menu-item p{
+    text-align: center;
+    padding: 13px 0;
+}
+
+
+
+.sidebar-menu-item :hover{
+    background-color: rgb(174, 136, 231);
+    color: black;
+}
+
+.sidebar-menu-item a{
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.logout {
+    text-align: center;
+    padding-top: 80px;
+}
+
+.logout button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    margin-bottom: 55px;
+    font-size: 1rem;
+    border: none;
+    transition: 0.3s ease-in;
+
+}
+
+.logout button:hover{
+    background-color: white;
+    color: red;
+    
+}
+
+
+

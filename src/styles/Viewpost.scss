@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.post-view {
+    min-height: 100vh;
+    background-color: #e2edff;
+    padding-top: 140px;
+    padding-bottom: 90px;
+    
+}
+
+.post-view-title p{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.post-view-author p{
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+
+.post-view-body p{
+    font-size: 1.3rem;
+    line-height: 1.7;
+    padding: 0 35px;
+    white-space: pre-line;
+}
+
+.post-view-body {
+    padding-top: 40px;
+}

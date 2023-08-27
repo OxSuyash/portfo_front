@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Handjet:wght@400;500&family=Open+Sans:wght@400;500&family=Ruwudu&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.project{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e2edff;
+    padding-bottom: 60px;
+    padding-top: 140px;
+}
+
+.project-card {
+    border: 1px solid rgb(114, 114, 114);
+    width: 80vw;
+    margin: 10px;
+    // padding: 15px;
+    border-radius: 8px;
+
+}
+
+.project-title{
+    background-color: rgb(247, 233, 135);
+    // background-color: rgb(68, 80, 105, 0.3) ;
+    padding: 9px 9px;
+    border-bottom: 1px solid rgb(114, 114, 114);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.project-title h2{
+    font-family: 'Ruwudu', serif;
+}
+
+.project-desc{
+    padding: 9px;
+    background-color: white;
+    
+}
+
+.project-desc p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+
+}
+
+.project-button {
+    padding: 9px;
+    background-color: white;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.project-link button{
+    padding: 6px 11px;
+    font-size: 1rem;
+    // font-weight: bold;
+    color: white;
+    border: none;
+    // background-color: #0d41fd;
+    background-color: #5B9A8B ;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.project-link button:hover {
+    background-color: rgb(1, 52, 40);
+}
+
+.page-title p{
+    font-size: 4rem;
+    padding: 15px 0;
+    font-family: 'Handjet', cursive;
+    
+    
+}
