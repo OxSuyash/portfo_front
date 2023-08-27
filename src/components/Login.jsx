@@ -8,14 +8,13 @@ import "../styles/Login.scss"
 
 const Login = () => {
 
-    const {isAuthenticated, setIsAuthenticated} = useContext(Context)
+    const { isAuthenticated, setIsAuthenticated } = useContext(Context)
 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
     const submitHandler = async (e) => {
         e.preventDefault()
-
         try {
             const { data } = await axios.post(`${server}/user/login`, {
                 email, password
@@ -26,17 +25,16 @@ const Login = () => {
                     },
                     withCredentials: true,
                 })
-            // setIsAuthenticated(true)
             setIsAuthenticated(true)
             toast.success(data.message)
         } catch (error) {
-            toast.error(error)
+            console.log(error)
             setIsAuthenticated(false)
         }
-
     }
 
     if (isAuthenticated) return <Navigate to={"/dashboard"} />
+
     return (
         <div className="login">
 

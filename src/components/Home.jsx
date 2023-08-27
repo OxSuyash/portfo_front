@@ -22,11 +22,11 @@ const Home = () => {
         </div>
       </div>
       <div className="home-project-button">
-        
+
         <Link to={"mailto:suyashkarne132@gmail.com"} ><button>Get a quote</button></Link>
       </div>
       <div className="quote">
-        
+
       </div>
     </div>
   )

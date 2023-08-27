@@ -5,8 +5,6 @@ import {server} from "../main"
 import { useState ,useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
-
-
 const Viewpost = () => {
 
   const [post, setPost] = useState({})
@@ -22,14 +20,10 @@ const Viewpost = () => {
         withCredentials: true
       })
       setPost(data.post)
-
     }
     getPost()
 
   }, [])
-
-
-
 
 
   return (

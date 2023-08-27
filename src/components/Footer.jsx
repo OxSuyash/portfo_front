@@ -15,7 +15,7 @@ const Footer = () => {
       </div>
       <hr />
       <div className="copyright">
-        <p>copyrights &copy; <Link to={"/login"} >suyash karne</Link> 2023</p>
+        <p>copyrights &copy; Suyash Karne 2023</p>
       </div>
     </div>
   )

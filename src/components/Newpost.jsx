@@ -7,8 +7,6 @@ import axios from 'axios'
 import toast from "react-hot-toast"
 import { Navigate } from 'react-router-dom'
 
-
-
 const Newpost = () => {
     const [title, setTitle] = useState("")
     const [body, setBody] = useState("")
@@ -16,7 +14,6 @@ const Newpost = () => {
 
     const addNewPost = async (e) => {
         e.preventDefault()
-
         try {
             const { data } = await axios.post(`${server}/post/new`, {
                 title, body
@@ -28,16 +25,13 @@ const Newpost = () => {
             })
             toast.success(data.message)
             setIsPublished(true)
-            
         } catch (error) {
-            // toast.error(error.response.data.message)
-            console.log(error.response.data.message)
+            console.log(error)
         }
 
     }
 
     if(isPublished) return <Navigate to={"/dashboard/posts"} />
-
 
     return (
         <div className="new-post">

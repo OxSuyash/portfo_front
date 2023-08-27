@@ -10,17 +10,11 @@ const Viewproject = () => {
 
   const [project, setProject] = useState({})
 
-  const {id} = useParams()
+  const { id } = useParams()
 
-  const dateFormat = {
-    year: 'numeric', 
-    month: 'long',
-    day: 'numeric'
-  }
-
-  useEffect(()=> {
+  useEffect(() => {
     const getProject = async () => {
-      const {data} = await axios.get(`${server}/project/get/${id}`, {
+      const { data } = await axios.get(`${server}/project/get/${id}`, {
         headers: {
           "Content-Type": "application/json"
         },
@@ -34,16 +28,14 @@ const Viewproject = () => {
 
   return (
     <div className="project-view">
-        <div className="project-view-title"><p>{project.title}</p></div>
-        <hr />
-        <div className="project-view-description"><p> <span className='item-name'>Description:</span>  {project.description}</p></div>
-        <div className="project-view-skills"><p><span className="item-name">Techstack used:</span> {project.skills}</p></div>
-        
-        
-        
-        <div className="project-view-button">
-          <Link to={project.link} target='_blank'><button>Go to Project</button></Link>
-        </div>
+      <div className="project-view-title"><p>{project.title}</p></div>
+      <hr />
+      <div className="project-view-description"><p> <span className='item-name'>Description:</span>  {project.description}</p></div>
+      <div className="project-view-skills"><p><span className="item-name">Techstack used:</span> {project.skills}</p></div>
+
+      <div className="project-view-button">
+        <Link to={project.link} target='_blank'><button>Go to Project</button></Link>
+      </div>
     </div>
   )
 }

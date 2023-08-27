@@ -11,11 +11,10 @@ const ProjectsA = () => {
   const [projects, setProjects] = useState([])
   const [isDeleted, setIsDeleted] = useState(false)
 
-  useEffect(()=> {
-
+  useEffect(() => {
     const getProjects = async () => {
       setIsDeleted(false)
-      const {data} = await axios.get(`${server}/project/all`, {
+      const { data } = await axios.get(`${server}/project/all`, {
         headers: {
           "Content-Type": "application/json"
         },
@@ -30,7 +29,7 @@ const ProjectsA = () => {
   const deleteProject = async (id) => {
     try {
       const projectId = id.target.id
-      const {data} = await axios.delete(`${server}/project/delete/${projectId}`, {
+      const { data } = await axios.delete(`${server}/project/delete/${projectId}`, {
         headers: {
           "Content-Type": "application/json"
         },
@@ -39,10 +38,9 @@ const ProjectsA = () => {
       toast.success(data.message)
       setIsDeleted(true)
     } catch (error) {
-      toast.error(error.response.data.message)
+      console.log(error)
     }
   }
-
 
   return (
     <div className="project-admin">
@@ -58,13 +56,13 @@ const ProjectsA = () => {
         <div className="project-list-table">
           <table>
             <tbody>
-            <tr>
-              <td className="table-column-name" id='project-title'><p>Title</p></td>
-              <td className="table-column-name" id='project-skills'><p>Techstack</p></td>
-              <td className="table-column-name" id='project-date'><p>Published On</p></td>
-              <td className="table-column-name" id='project-edit-button'><p>Edit Project</p></td>
-              <td className="table-column-name" id='project-delete-button'><p>Delete Project</p></td>
-            </tr>
+              <tr>
+                <td className="table-column-name" id='project-title'><p>Title</p></td>
+                <td className="table-column-name" id='project-skills'><p>Techstack</p></td>
+                <td className="table-column-name" id='project-date'><p>Published On</p></td>
+                <td className="table-column-name" id='project-edit-button'><p>Edit Project</p></td>
+                <td className="table-column-name" id='project-delete-button'><p>Delete Project</p></td>
+              </tr>
             </tbody>
           </table>
           {
@@ -82,17 +80,14 @@ const ProjectsA = () => {
                           {/* <td><p>{project.link}</p></td> */}
                           <td className='post-list-table-column' id='project-date'>{String(new Date(project.date).toLocaleString())}</td>
                           <td className='post-list-table-column' id='project-edit-button'><Link to={`/dashboard/projects/edit/${project._id}`} ><button>Edit</button></Link></td>
-                          <td className='post-list-table-column' id='project-delete-button'><button onClick={deleteProject}  id={project._id}>Delete</button></td>
+                          <td className='post-list-table-column' id='project-delete-button'><button onClick={deleteProject} id={project._id}>Delete</button></td>
 
                         </tr>
                       </tbody>
 
                     </table>
 
-
-
                   </div>
-
 
                 </div>
               )

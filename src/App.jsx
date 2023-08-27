@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Header from "./components/Header"
 import Home from "./components/Home"
 import Footer from "./components/Footer"
@@ -18,7 +18,6 @@ import Viewproject from "./components/Viewproject"
 
 
 function App() {
-
   return (
     <Router>
       <Header />
@@ -33,13 +32,12 @@ function App() {
         <Route path="/dashboard/projects" element={<ProjectsA />} />
         <Route path="/dashboard/posts/new" element={<Newpost />} />
         <Route path="/dashboard/posts/edit/:id" element={<Editpost />} />
-
         <Route path="/dashboard/projects/new" element={<Newproject />} />
         <Route path="/dashboard/projects/edit/:id" element={<Editproject />} />
         <Route path="/project/:id" element={<Viewproject />} />
       </Routes>
       <Footer />
-      <Toaster/>
+      <Toaster />
     </Router>
   )
 }

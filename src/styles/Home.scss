@@ -6,19 +6,13 @@
 }
 
 .home {
-    // background-color: #fdd7b2;
     min-height: 100vh;
-    
 }
 
 .main {
     background-color: #9a9999;
     min-height: 75vh;
     padding-top: 70px;
-}
-
-.image{
-    // padding-top: 50px;
 }
 
 .image img {
@@ -40,7 +34,6 @@
     font-family: 'Roboto Mono', monospace;
     text-align: center;
     padding-bottom: 20px;
-
 }
 
 .home-project-button {
@@ -48,7 +41,6 @@
     background-color: rgb(5, 127, 70,0.6);
     text-align: center;
     padding-top: 40px;
-    
 }
 
 .home-project-button button{
@@ -60,7 +52,6 @@
     color: rgb(6, 66, 38);
     transition: 0.7s ease;
     cursor: pointer;
-    
 }
 
 .home-project-button button:hover{

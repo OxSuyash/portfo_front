@@ -4,7 +4,6 @@ import axios from "axios"
 import "../styles/Blog.scss"
 import { useEffect } from 'react'
 import { useState } from 'react'
-import toast from "react-hot-toast"
 import { server } from '../main.jsx'
 
 const Blog = () => {
@@ -19,20 +18,11 @@ const Blog = () => {
                 },
                 withCredentials: true
             })
-
             setPosts(data.posts)
-
-            // console.log(data.posts[0].title)
-            console.log(posts)
-
         };
-
         getPosts()
 
-        toast.success("success")
-
     }, [])
-
 
 
     return (

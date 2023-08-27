@@ -3,7 +3,7 @@ import Sidebar from './Sidebar'
 import "../styles/PostsA.scss"
 import { useState, useEffect } from 'react'
 import { server } from '../main'
-import { Link, Navigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 import toast from "react-hot-toast"
 
@@ -40,13 +40,9 @@ const PostsA = () => {
             setIsDeleted(true)
 
         } catch (error) {
-            toast.error(error.response.data.message)
+            console.log(error)
         }
     }
-
-
-
-
 
     return (
         <div className="post-admin">
@@ -92,29 +88,16 @@ const PostsA = () => {
                                                     <td className='post-list-table-column' id='post-view-button'><Link to={`/blog/${post._id}`} target='_blank'><button>View post</button></Link></td>
                                                     <td className='post-list-table-column' id='post-edit-button'><Link to={`/dashboard/posts/edit/${post._id}`} ><button>Edit</button></Link></td>
                                                     <td className='post-list-table-column' id='post-delete-button'><button onClick={deletePost} id={post._id}>Delete</button></td>
-
-
-
                                                 </tr>
-
                                             </tbody>
-
-
                                         </table>
 
-
-
-
                                     </div>
-
 
                                 </div>
                             )
                         })
                     }
-
-
-
 
                 </div>
             </div>

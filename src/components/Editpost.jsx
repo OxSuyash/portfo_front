@@ -10,31 +10,22 @@ import toast from "react-hot-toast"
 const Editpost = () => {
     const { id } = useParams()
 
-    
     const [title, setTitle] = useState("")
     const [body, setBody] = useState("")
     const [isEdited, setIsEdited] = useState(false)
     const [editDone, setEditDone] = useState(false)
 
-    
-
-    useEffect(()=> {
+    useEffect(() => {
         setEditDone(false)
         const getPost = async () => {
-
-                // console.log(id)
-                const {data} = await axios.get(`${server}/post/get/${id}`, {
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    withCredentials: true
-                })
-                // console.log(data.post)
-                // setPost(data.post)
-                setTitle(data.post.title)
-                setBody(data.post.body)
-                // console.log(title, body)
-            
+            const { data } = await axios.get(`${server}/post/get/${id}`, {
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                withCredentials: true
+            })
+            setTitle(data.post.title)
+            setBody(data.post.body)
         }
         getPost()
     }, [])
@@ -43,7 +34,7 @@ const Editpost = () => {
         e.preventDefault()
 
         try {
-            const {data} = await axios.put(`${server}/post/update/${id}`, {
+            const { data } = await axios.put(`${server}/post/update/${id}`, {
                 title, body
             }, {
                 headers: {
@@ -59,18 +50,16 @@ const Editpost = () => {
         }
     }
 
-
-    
-    if(editDone) return <Navigate to={"/dashboard/posts"} />
+    if (editDone) return <Navigate to={"/dashboard/posts"} />
 
     return (
         <div className="edit-post">
             <Sidebar />
 
             <div className="edit-post-main">
-                 <p>Post Title: {title} <br /> Post Id: {id} </p>
+                <p>Post Title: {title} <br /> Post Id: {id} </p>
                 <form action="" className="edit-post-form" onSubmit={editPost}>
-                    <input type="text"  value={title} onChange={(e) => {
+                    <input type="text" value={title} onChange={(e) => {
                         setTitle(e.target.value)
                         setIsEdited(true)
                     }} required />

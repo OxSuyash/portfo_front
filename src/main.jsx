@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import { createContext } from 'react'
@@ -9,7 +9,6 @@ export const Context = createContext({
   isAuthenticated: false
 })
 
-
 const AppWrapper = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
 
@@ -19,8 +18,6 @@ const AppWrapper = () => {
     </Context.Provider>
   )
 }
-
-
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
